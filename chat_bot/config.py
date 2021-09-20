@@ -1,4 +1,4 @@
-TOKEN = "981502050:AAEock7NMbNd3tUzDSk4e3ZEACDT3yXnJhk"
+TOKEN = ""
 
 sign = {"близнецы": ["gemini", '♊'],
         "телец": ["taurus", '♉'],
