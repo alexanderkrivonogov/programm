@@ -5,7 +5,7 @@ from telegram_bot_pagination import InlineKeyboardPaginator
 from catalog.models import Category, Product
 import telebot
 
-bot = telebot.TeleBot('981502050:AAEock7NMbNd3tUzDSk4e3ZEACDT3yXnJhk')
+bot = telebot.TeleBot('')
 
 
 class Command(BaseCommand):
