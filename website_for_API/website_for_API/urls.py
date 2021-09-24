@@ -43,7 +43,8 @@ router.register(r'user', UserViewset)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
-    path('', include(('comics_site.urls', 'comics_site'), namespace='comics_cite'))
+    path('', include(('comics_site.urls', 'comics_site'), namespace='comics_cite')),
+    path('account/', include('account.urls')),
     # path('', include(router.urls)),
     # path('api-auth/', include('rest_framework.urls', namespace="rest_framework")),
 

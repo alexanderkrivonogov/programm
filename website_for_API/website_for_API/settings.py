@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'cart',
     'comics_site',
-    'orders',
+    # 'orders',
+    'account',
 
 ]
 

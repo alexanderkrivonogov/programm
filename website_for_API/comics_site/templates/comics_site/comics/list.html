@@ -22,7 +22,7 @@
     {% for comic in comics %}
     <div class="item">
         <a href="{{ comic.get_absolute_url }}">
-            <img src="{% if comic.photo %}{{ comic.photo.url }}{% else %}{% static " img/no_image.png" %}{% endif%}">
+            <img src="{% if comic.photo %}{{ comic.photo.url }}{% else %}{% static 'img/no_image.png' %}{% endif%}">
         </a>
         <a href="{{ comic.get_absolute_url }}">{{ comic.name }}</a><br>
 

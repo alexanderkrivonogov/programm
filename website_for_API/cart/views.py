@@ -16,7 +16,6 @@ def cart_add(request, comics_id):
         cart.add(comics=comics,
                  quantity=cd['quantity'],
                  update_quantity=cd['update'], )
-    print(cart)
     return redirect('cart:cart_detail')
 
 
@@ -29,4 +28,7 @@ def cart_remove(request, comics_id):
 
 def cart_detail(request):
     cart = Cart(request)
+    for item in cart:
+        item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'],
+                                                                   'update': True})
     return render(request, 'cart/detail.html', {'cart': cart})
