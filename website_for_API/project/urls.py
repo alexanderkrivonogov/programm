@@ -1,4 +1,4 @@
-"""website_for_API URL Configuration
+"""project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -43,10 +43,11 @@ router.register(r'user', UserViewset)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
+    path('orders/', include(('orders.urls', 'orders'), namespace='orders')),
     path('', include(('comics_site.urls', 'comics_site'), namespace='comics_cite')),
     path('account/', include('account.urls')),
-    # path('', include(router.urls)),
-    # path('api-auth/', include('rest_framework.urls', namespace="rest_framework")),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace="rest_framework")),
 
 ]
 if settings.DEBUG:
